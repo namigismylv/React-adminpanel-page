@@ -3,7 +3,9 @@ import React from 'react'
 const Footer = () => {
   return (
     <footer>
-      adminFooter
+      <div className="footer">
+        <p>Copyright © Your Website 2023</p>
+      </div>
     </footer>
   )
 }

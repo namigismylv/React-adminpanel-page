@@ -2,11 +2,11 @@ import React from "react";
 import "./Loading.css";
 const Loading = () => {
   return (
-    <div class="box">
-      <div class="b b1"></div>
-      <div class="b b2"></div>
-      <div class="b b3"></div>
-      <div class="b b4"></div>
+    <div className="box">
+      <div className="b b1"></div>
+      <div className="b b2"></div>
+      <div className="b b3"></div>
+      <div className="b b4"></div>
     </div>
   );
 };

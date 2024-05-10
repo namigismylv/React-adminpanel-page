@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { RouterProvider, Routes, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import ROUTES from "./routes/routes";
 import MainContext from "./context/context.jsx";
 import axios from "axios";
@@ -7,13 +7,19 @@ import "./App.css";
 function App() {
   const router = createBrowserRouter(ROUTES);
   const [data, setData] = useState([]);
-  const contextData = { data, setData };
-  useEffect(()=>{
-    axios.get("http://localhost:3000/products").then(res=>{
-    console.log(res);  
-    // setData([...res.data])
-    },[])
-  })
+
+  const [error, setError] = useState("")
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    axios.get("http://localhost:3000/products").then(res => {
+      setData([...res.data])
+      setLoading(false)
+    }).catch(error => {
+      setError(error)
+      setLoading(false)
+    })
+  }, [])
+  const contextData = { data, setData, error, setError, loading, setLoading };
   return (
     <>
       <MainContext.Provider value={contextData}>

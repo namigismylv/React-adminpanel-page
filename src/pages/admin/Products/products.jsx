@@ -1,9 +1,10 @@
-import React from 'react'
-
+import React, { useContext } from 'react'
+import MainContext from '../../../context/context'
+import Loading from '../../Loading/Loading'
 const Products = () => {
   return (
     <div>
-      products
+    
     </div>
   )
 }
