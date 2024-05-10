@@ -6,6 +6,7 @@ import AdminRoot from "../pages/admin/AdminRoot";
 import SiteRoot from "../pages/site/SiteRoot";
 import Error from "../pages/Error/Error";
 import Detail from "../pages/site/Detail/Detail";  
+import Add from "../pages/admin/Add/Add";
 
 
 const ROUTES = [
@@ -43,6 +44,10 @@ const ROUTES = [
             path:"products",
             element:<Products/>
         },
+        {
+          path:"add",
+          element:<Add/>
+      }
     ]
   }
 ];
