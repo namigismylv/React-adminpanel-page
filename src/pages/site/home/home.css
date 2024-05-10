@@ -1,0 +1,23 @@
+.shop__div {
+  background-color: rgb(33 37 41);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 96px;
+  padding-bottom: 87px;
+  h1 {
+    font-size: 3.5rem;
+    color: white;
+    font-weight: bolder;
+  }
+  p {
+    color: rgb(255 255 255 / 50%);
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+}
+#cards{
+    margin-top: 96px;
+    margin-bottom: 96px;
+}
