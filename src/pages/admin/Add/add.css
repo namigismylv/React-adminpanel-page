@@ -1,0 +1,47 @@
+.form__div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url("https://science.nasa.gov/wp-content/uploads/2023/09/black_hole_16x9_2.jpg?w=1600");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.form {
+    padding: 40px;
+    input{
+        display: block;
+        width: 350px;
+        margin-top: 15px;
+        border-radius: 10px;
+        padding: 20px;
+        outline:  none;
+        color: orangered;
+        border: none;
+        background-color:rgba(0, 0, 0, 0.475);
+        transition: 0.3s;
+        
+                
+    }
+    button{
+        margin-top: 20px;
+        padding: 10px 25px;
+        border-radius: 5px;
+        border: none;
+        background-color: orangered;
+        transition:0.4s;
+
+    }
+    button:hover{
+       background-color:  black;
+       color: orangered;
+       border: 1px solid orangered;
+    }
+    
+}
+.form input::placeholder{
+        color: orangered;
+}
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }

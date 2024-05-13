@@ -1,35 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./home.css";
+import Cards from "../../../components/site/cards/cards";
+import MainContext from "../../../context/context"
+import Loading from "../../Loading/Loading";
 const Home = () => {
+  const {data,loading}=useContext(MainContext)
+
   return (
     <main>
       <section id="shop">
         <div className="shop__div">
           <h1>Shop in style</h1>
-          <p>With this shop hompage template</p>
+          <p>With this shop homepage template</p>
         </div>
       </section>
       <section id="cards">
         <div className="cards__div">
-          <div className="container">
-            <div className="row">
-              <div className="col-3">
-                <div class="card" style={{width: "18rem"}}>
-                  <img src="..." class="card-img-top" alt="..." />
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <button className="btn btn-outline-dark">
-                      Go somewhere
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          {
+            loading ? <Loading/> :<Cards infos={data}/>
+          }
         </div>
       </section>
     </main>
@@ -37,3 +26,4 @@ const Home = () => {
 };
 
 export default Home;
+

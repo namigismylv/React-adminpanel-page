@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
+import MainContext from "../../../context/context";
 const Header = () => {
+  const {basketItems}=useContext(MainContext)
   return (
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -23,7 +25,9 @@ const Header = () => {
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-ul">
               <li class="nav-item">
-                <Link className="nav-link  active" to='/'>Home</Link>
+                <Link className="nav-link  active" to="/">
+                  Home
+                </Link>
               </li>
               <li class="nav-item">
                 <Link class="nav-link" to="#">
@@ -31,7 +35,8 @@ const Header = () => {
                 </Link>
               </li>
               <li class="nav-item dropdown">
-                <Link to='/shop'
+                <Link
+                  to="/shop"
                   class="nav-link dropdown-toggle"
                   href="#"
                   role="button"
@@ -62,17 +67,17 @@ const Header = () => {
                 </ul>
               </li>
             </ul>
-            <button class="btn btn-outline-dark" type="submit">
-              <i className="fa-solid fa-cart-shopping"></i>
-              Cart
-              <span>0</span>
-            </button>
+            <Link to="/basket" className="text-decoration-none">
+              <button class="btn btn-outline-dark" type="submit">
+                <i className="fa-solid fa-cart-shopping"></i>
+                Cart
+                <span>{basketItems.length}</span>
+              </button>
+            </Link>
           </div>
         </div>
       </nav>
     </header>
-
-
   );
 };
 

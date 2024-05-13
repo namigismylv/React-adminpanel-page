@@ -1,5 +1,7 @@
 import React from 'react'
 import Tableitem from '../tableitem/tableitem'
+import './table.css'
+
 const Table = ({items}) => {
   return (
     <table class="table table-hover table-dark mb-5 mt-5">

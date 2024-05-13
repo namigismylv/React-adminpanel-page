@@ -7,8 +7,7 @@ import SiteRoot from "../pages/site/SiteRoot";
 import Error from "../pages/Error/Error";
 import Detail from "../pages/site/Detail/Detail";  
 import Add from "../pages/admin/Add/Add";
-
-
+import Basket from "../pages/site/Basket/Basket";
 const ROUTES = [
   {
     path: "/",
@@ -21,6 +20,10 @@ const ROUTES = [
       {
         path: "shop",
         element:<Shop/>
+      },
+      {
+        path:"basket",
+        element:<Basket/>
       },
       {
         path:"details/:id",
