@@ -1,7 +1,7 @@
 import React, { useContext,useEffect} from "react";
 import MainContext from "../../../context/context";
 
-const BasketItem = ({ item }) => {
+const BasketItem = ({ item,index }) => {
   const { basketItems, setBasketItems } = useContext(MainContext);
   useEffect(() => {
     localStorage.setItem("basketItems", JSON.stringify(basketItems));
@@ -44,7 +44,7 @@ const BasketItem = ({ item }) => {
   return (
     <>
       <tr>
-        <th scope="row">{item.item.id}</th>
+        <th scope="row">{index+1}</th>
         <td>
           <img width="100px" height="100px" src={item.item.image} alt="" />
         </td>

@@ -10,7 +10,7 @@ const Basket = () => {
         <table class="table table-hover table-dark mb-5 mt-5">
         <thead>
           <tr>
-            <th scope="col">id</th>
+            <th scope="col">No</th>
             <th scope="col">image</th>
             <th scope="col">name</th>
             <th scope="col">price</th>
@@ -25,7 +25,7 @@ const Basket = () => {
                 basketItems.map((item,index)=>{
                     sum+=item.totalPrice
                     return(
-                        <BasketItem key={index} item={item}/>
+                        <BasketItem key={index} item={item} index={index}/>
                         
                     )
                 })
